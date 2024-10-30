@@ -1,0 +1,18 @@
+body{
+    position: relative;
+}
+.carousel_img{
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+/* Home.module.css */
+.carouselIndicators button {
+    width: 100px; /* Button width */
+}
+
+.carouselIndicators .active {
+    background-color: #ff0000; /* Different color for active indicator */
+    opacity: 1; /* Fully opaque */
+}

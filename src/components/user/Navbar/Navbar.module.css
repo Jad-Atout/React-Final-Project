@@ -1,0 +1,168 @@
+/* Navbar.module.css */
+.sticky_nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    padding: 15px 0;
+    z-index: 2;
+
+}
+
+.navbar {
+    position: relative;
+    top: 0;
+    background-color: black;
+    padding: 15px 0;
+
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+    margin:auto;
+
+}
+.start,.end{
+    fill: white;
+    display: flex;
+    gap: 30px;
+
+}
+
+
+.burger_menu,.search,.profile,.cart{
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+.ferrari_logo  {
+     width: 40px;
+     height: 40px;
+     fill: white;
+ }
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+background-color: rgba(0, 0, 0, .5);
+}
+.modal.active{
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s ease-in-out;
+
+}
+.sliding_profile_window,.sliding_bag_window {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: -1000px;
+    height: 100%;
+    width: 480px;
+    background-color: white;
+
+    align-items: start;
+    transition: right 1s ease-in-out;
+    gap: 20px;
+}
+.sliding_profile_window.active,.sliding_bag_window.active {
+    right: 0 !important;
+
+}
+.sliding_profile_window div:nth-child(1),.sliding_bag_window div:nth-child(1) {
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 30px;
+}
+.sliding_profile_window button{
+    border: solid 2px black;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-weight:500;
+    background-color: transparent;
+}
+.sliding_profile_window button:hover{
+
+    background-color: #c7160e;
+    transition: background-color 1.5s ease;
+    color: white;
+    border-color: white;
+}.sliding_profile_window div:nth-child(2){
+    padding: 20px 0;
+    display: flex;
+     background-color: #E1E0E0;
+    width: 100%;
+    justify-content: space-around;
+
+ }
+.sliding_bag_window{
+    overflow-y: scroll;
+}
+ .shopping_bag{
+     padding: 10px 0;
+     display: flex; /* d-flex */
+     flex-direction: row-reverse; /* flex-row-reverse */
+     justify-content: space-between; /* justify-content-between */
+     width: 100%; /* w-100 */
+     align-items: center; /* align-items-center */
+     border-bottom: 2px solid #E1E0E0;; /* border-bottom */
+     font-family: FerrariSans, serif;
+ }
+ .checkout{
+     font-family: "Ferrari-SansMedium", serif;
+     position: absolute;
+     bottom: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: 5px;
+     border-top: 1px solid #E1E0E0;
+     width: 100%;
+     padding: 0 40px;
+     margin-bottom: 30px;
+ }
+ .checkout div{
+     display: flex;
+     justify-content: space-between;
+     text-transform: uppercase;
+     box-sizing: border-box;
+
+ }
+ .checkout div:nth-child(1){
+     margin-right: 0;
+     font-size: 15px;
+     color: darkgrey;
+ }
+.checkout div:nth-child(2){
+    font-size: 20px;
+    font-weight: 600;
+}
+.checkout div:nth-child(3) button:first-child{
+    border-radius: 20px;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    font-family: FerrariSans, serif;
+    letter-spacing: 2px;
+    padding: 0 10%;
+    border: none;
+}
+.checkout div:nth-child(3) button:last-child{
+    border-radius: 20px;
+    background-color:transparent;
+    padding: 1% 10%;
+}
+.checkout div:nth-child(3) button:last-child img{
+    width: 80%;
+}
