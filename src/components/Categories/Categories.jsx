@@ -11,7 +11,7 @@ import 'swiper/css/scrollbar';
 import style from './Categories.module.css'
 
 export function  Categories() {
-    const {data,error,loading} =  useFetchData('https://ecommerce-node4.onrender.com/categories')
+    const {data,error,loading} =  useFetchData('https://ecommerce-node4.onrender.com/categories/')
     if (loading){
        return <Loader></Loader>
     }

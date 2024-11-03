@@ -12,7 +12,6 @@ function App() {
     useEffect(() => {
         if (localStorage.getItem("userToken")) {
             const token = localStorage.getItem("userToken")
-            console.log(token)
             set_user_data(jwtDecode(token))
         }
     }, []);
